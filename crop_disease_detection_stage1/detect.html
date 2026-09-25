@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disease Detection | CropGuard AI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="navbar container">
+    <a class="brand" href="index.html"><span class="brand-mark">✦</span> CropGuard <span>AI</span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <div class="nav-links"><a href="index.html">Home</a><a href="detect.html" class="active">Disease Detection</a><a href="about.html">About</a></div>
+    <a class="nav-cta" href="detect.html">Start Detection →</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero container">
+    <div class="eyebrow">DISEASE DETECTION</div>
+    <h1>Analyze a crop leaf image.</h1>
+    <p>Upload a clear image to preview the detection workflow. The AI model will be connected in Stage 3.</p>
+  </section>
+
+  <section class="detection-section container">
+    <div class="upload-card">
+      <div id="dropZone" class="drop-zone">
+        <input type="file" id="imageInput" accept="image/*" hidden>
+        <div id="uploadPrompt">
+          <div class="upload-icon">↑</div>
+          <h2>Drop your image here</h2>
+          <p>or choose an image from your device</p>
+          <button class="btn btn-primary" id="chooseBtn" type="button">Choose Image</button>
+          <small>JPG, JPEG or PNG · Clear leaf images work best</small>
+        </div>
+        <div id="previewArea" class="preview-area hidden">
+          <img id="imagePreview" alt="Selected crop leaf preview">
+          <div class="file-info">
+            <strong id="fileName">Image selected</strong>
+            <span id="fileSize"></span>
+          </div>
+          <button class="btn btn-secondary" id="changeBtn" type="button">Change image</button>
+        </div>
+      </div>
+      <div class="upload-footer">
+        <span>🔒 Image stays in your browser in this Stage 1 demo.</span>
+        <button id="analyzeBtn" class="btn btn-primary" disabled>Analyze Image</button>
+      </div>
+    </div>
+
+    <aside class="info-card">
+      <div class="eyebrow">NEXT STAGE</div>
+      <h2>What the AI will do</h2>
+      <ul class="check-list">
+        <li>Preprocess the uploaded image.</li>
+        <li>Extract visual patterns from the leaf.</li>
+        <li>Classify the crop condition.</li>
+        <li>Return a predicted disease and confidence score.</li>
+      </ul>
+      <div class="notice">Stage 1 is the visual interface. The prediction engine will be connected after the model is trained.</div>
+    </aside>
+  </section>
+
+  <section id="resultSection" class="result-section container hidden">
+    <div class="result-card">
+      <div class="result-icon">✓</div>
+      <div>
+        <div class="eyebrow">DEMO RESULT</div>
+        <h2>Image received successfully</h2>
+        <p>This confirms that the website can accept and preview a crop image. No disease prediction is being claimed yet.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer"><div class="container footer-inner"><span>© 2026 CropGuard AI</span><span>AI-Based Crop Disease Detection System</span></div></footer>
+<script src="js/script.js"></script>
+</body>
+</html>
