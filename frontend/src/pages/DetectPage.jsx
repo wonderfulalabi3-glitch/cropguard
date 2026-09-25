@@ -101,16 +101,28 @@ export default function DetectPage() {
             <h3>How to ensure consistent diagnoses</h3>
             <ul className="check-list">
               <li>
-                <span>✓</span> <strong>Center on symptomatic foliage</strong>: Fill most of the frame with the leaf blade and lesions.
+                <span>✓</span>
+                <div>
+                  <strong>Center on symptomatic foliage</strong>: Fill most of the frame with the leaf blade and lesions.
+                </div>
               </li>
               <li>
-                <span>✓</span> <strong>Natural diffuse lighting</strong>: Avoid harsh direct flash or heavy shadows that mask chlorosis.
+                <span>✓</span>
+                <div>
+                  <strong>Natural diffuse lighting</strong>: Avoid harsh direct flash or heavy shadows that mask chlorosis.
+                </div>
               </li>
               <li>
-                <span>✓</span> <strong>De-bias background</strong>: Try placing the leaf flat on clean paper or ground without fingers obscuring veins.
+                <span>✓</span>
+                <div>
+                  <strong>De-bias background</strong>: Try placing the leaf flat on clean paper or ground without fingers obscuring veins.
+                </div>
               </li>
               <li>
-                <span>✓</span> <strong>Specify Crop Hint</strong>: If you know the species (e.g. Tomato, Corn), selecting it eliminates cross-species ambiguity.
+                <span>✓</span>
+                <div>
+                  <strong>Specify Crop Hint</strong>: If you know the species (e.g. Tomato, Corn), selecting it eliminates cross-species ambiguity.
+                </div>
               </li>
             </ul>
             <div className="notice-box">

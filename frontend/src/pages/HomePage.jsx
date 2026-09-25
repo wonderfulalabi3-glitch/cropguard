@@ -101,32 +101,20 @@ export default function HomePage({ onStartDetection }) {
 
       {/* Architecture Highlights */}
       <section className="section container" style={{ paddingTop: 0 }}>
-        <div
-          style={{
-            background: "#ffffff",
-            borderRadius: "var(--radius-lg)",
-            padding: "48px 40px",
-            border: "1px solid var(--border)",
-            display: "grid",
-            gridTemplateColumns: "1fr auto",
-            gap: "32px",
-            alignItems: "center",
-          }}
-        >
+        <div className="cta-banner">
           <div>
             <div className="eyebrow">MODERN TECH STACK</div>
-            <h2 style={{ fontSize: "2rem", marginBottom: "12px" }}>
+            <h2 className="cta-heading">
               React + FastAPI + Vision Language Models
             </h2>
-            <p style={{ color: "var(--text-muted)", maxWidth: "600px" }}>
+            <p className="cta-desc">
               Unlike brittle legacy CNNs that break on unfamiliar leaf angles, our
               architecture leverages high-reasoning vision models that understand
               complex disease symptoms, multi-infection co-occurrences, and non-plant rejections.
             </p>
           </div>
           <button
-            className="btn btn-primary"
-            style={{ whiteSpace: "nowrap" }}
+            className="btn btn-primary cta-btn"
             onClick={onStartDetection}
           >
             Launch Diagnosis →

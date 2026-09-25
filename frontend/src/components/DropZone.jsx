@@ -210,6 +210,8 @@ export default function DropZone({
           disabled={isLoading}
           style={{
             width: "100%",
+            maxWidth: "100%",
+            boxSizing: "border-box",
             padding: "10px 14px",
             borderRadius: "var(--radius-sm)",
             border: "1px solid var(--border)",
@@ -217,6 +219,8 @@ export default function DropZone({
             background: "#ffffff",
             color: "var(--text-dark)",
             cursor: "pointer",
+            textOverflow: "ellipsis",
+            overflow: "hidden",
           }}
         >
           <option value="Auto-Detect">Auto-Detect (AI identifies crop species)</option>
@@ -234,7 +238,7 @@ export default function DropZone({
           <option value="Citrus">Citrus / Lemon / Orange</option>
           <option value="Cucumber / Melon">Cucumber / Squash / Melon</option>
         </select>
-        <span style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>
+        <span style={{ display: "block", fontSize: "0.78rem", color: "var(--text-muted)", marginTop: "4px", lineHeight: "1.4" }}>
           Selecting your crop provides domain constraints that maximize diagnostic precision.
         </span>
       </div>
