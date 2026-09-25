@@ -252,10 +252,10 @@ export default function DropZone({
           <h3>Drop your crop leaf photo here</h3>
           <p>or click to browse from your device / storage</p>
 
-          <div style={{ display: "flex", gap: "10px", justifyContent: "center", flexWrap: "wrap" }}>
+          <div className="dropzone-actions-row">
             <button
               type="button"
-              className="btn btn-primary"
+              className="btn btn-primary dropzone-btn"
               onClick={e => {
                 e.stopPropagation();
                 fileInputRef.current?.click();
@@ -265,7 +265,7 @@ export default function DropZone({
             </button>
             <button
               type="button"
-              className="btn btn-outline"
+              className="btn btn-secondary dropzone-btn"
               onClick={e => {
                 e.stopPropagation();
                 cameraInputRef.current?.click();
@@ -316,10 +316,10 @@ export default function DropZone({
             <span className="file-size">({formatBytes(selectedFile?.size)})</span>
           </div>
 
-          <div style={{ display: "flex", gap: "10px" }}>
+          <div className="preview-actions-row">
             <button
               type="button"
-              className="btn btn-outline"
+              className="btn btn-outline preview-action-btn"
               disabled={isLoading}
               onClick={() => fileInputRef.current?.click()}
             >
@@ -327,7 +327,7 @@ export default function DropZone({
             </button>
             <button
               type="button"
-              className="btn btn-outline"
+              className="btn btn-outline preview-action-btn"
               disabled={isLoading}
               onClick={onClear}
             >
@@ -343,7 +343,7 @@ export default function DropZone({
         </span>
         <button
           type="button"
-          className="btn btn-primary"
+          className="btn btn-primary analyze-action-btn"
           disabled={!selectedFile || isLoading}
           onClick={onAnalyze}
         >
